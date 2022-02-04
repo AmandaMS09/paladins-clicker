@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Metadados -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="Author" content="Amanda Moura de Souza">
+    <!-- Estilo -->
+        <!-- Main -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- Icone da pagina -->
+    <link rel="sortcut icon" href="img/ico_maeve.jpeg" type="image/x-icon"/>
+    <!-- Título -->
+    <title>Paladins Clicker</title>
+</head>
+
+<!-- Corpo -->
+<body>
+    <!-- Cabeçalho -->
+    <header class="navbar navbar-expand-lg">
+        <!-- Dropdown perfil -->
+        <div class="dropdown">
+            <button class="dropbtn"><i class="bi bi-person-circle"></i></button>
+            <div class="dropdown-content">
+                <a href="#">Perfil</a>
+                <a href="#">Salvar</a>
+                <a href="#">Sair da conta</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Jogo -->
+    <div id="corpo">
+        <!-- Batalha -->
+        <section id="batalha">
+            <div id="inimigo_dados" class="div">
+                <!-- Vida -->
+                <span>
+                    <nav id="container">
+                        <strong><span id="num_vida"></span></strong>
+                        <nav id="vida"></nav>
+                    </nav>
+                </span>
+                <!-- Nome -->
+                <span id="nome"></span>
+            </div>
+
+            <!-- Dinheiro -->
+            <div id="div_dinheiro" class="div">
+                <span id="creditos_ganhos"></span>
+                <span>Créditos</span>
+            </div>
+
+            <!-- Inimigo -->
+            <div id="inimigo" class="div">
+                <img id="imagem" src="" alt="inimigo" draggable="false">
+            </div>
+        </section>
+
+        <!-- Upgrades -->
+        <section id="upgrade">
+            <h1>Upgrades</h1>
+            <div class="overflow">
+                <!-- Balas -->
+                <div class="upgrade" id="balas">
+                    <div><img class="icone" src="img/balas.png">Balas</div>
+                    <div class="up_dados">
+                        <div id="bala">x0</div>
+                        <div id="preco_bala" class="preco">40c</div>
+                    </div>
+                </div>
+                <!-- Carteiras -->
+                <div class="upgrade" id="carteiras">
+                    <div><img class="icone" src="img/carteira.png">Carteira</div>
+                    <div class="up_dados">
+                        <div id="carteira">x0</div>
+                        <div id="preco_carteira" class="preco">80c</div>
+                    </div>
+                </div>
+                <!-- Torretas -->
+                <div class="upgrade" id="torretas">
+                    <div><img class="icone" src="img/torreta.png">Torreta</div>
+                    <div class="up_dados">
+                        <div id="torreta">x0</div>
+                        <div id="preco_torreta" class="preco">150c</div>
+                    </div>
+                </div>
+                <div class="upgrade">
+                    <div>Em breve</div>
+                </div>
+                <div class="upgrade"></div>
+                <div class="upgrade"></div>
+                <div class="upgrade"></div>
+                <div class="upgrade"></div>
+            </div>
+        </section>
+    </div>
+
+<!-- Interacao -->
+    <!-- Main -->
+    <script src="js/script.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>
