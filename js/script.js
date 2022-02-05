@@ -16,7 +16,8 @@ const campeoes = [grohk, maeve, evie];
     const doc_img = document.getElementById("imagem")
     let max_hp;
     // Dinheiro
-    let creditos;
+    let creditos = 0
+    let cpa = 40; // Credito por abate
     // Upgrades
     let bala, preco_bala
     let carteira, preco_carteira
@@ -53,14 +54,28 @@ const campeoes = [grohk, maeve, evie];
     function inimigo_set() {
         doc_img.setAttribute("src", campeoes[Math.floor(Math.random() * campeoes.length)])
         info_get()
-        vida_num.innerHTML = max_hp;
+        vida_num.innerHTML = max_hp
+        vida_barra = 200
+        document.getElementById("vida").style.width = vida_barra +"px";
+    }
+    // Funcao de gestao de abates
+    function abate() {
+        if (vida_num.innerHTML < 1) {
+            inimigo_set() // Mudanca de inimigo
+            abates += 1 // Adicao do numero de abates
+            creditos += cpa // Ganho de creditos
+            document.getElementById("creditos").innerHTML = creditos;
+            if(abates % 5 == 0) { // Aumento da vida dos inimigos a cada 5 abates
+                mult_hp += 0.25;
+            }
+        }
     }
     // Funcao de dano
     function vida_change() {
         vida_num.innerHTML -= dano_num
         vida_barra -= dano_barra
-        document.getElementById("vida").style.width = vida_barra +"px";
-
+        document.getElementById("vida").style.width = vida_barra +"px"
+        abate();
     }
     // Funcao de interacao com numero de abates
 
